@@ -1,0 +1,49 @@
+<header>
+      <nav class="navbar navbar-expand-md ">
+        <a href="https://www.Chrysa.com" class="navbar-brand">
+          <img src="..\assets\houseHub.png" alt="Logo" style="width: 150px; height: 150px;">
+        </a>
+        <ul class="navbar-nav text-center">
+          <li><a *ngIf="hardcodedAuthnticationService.isUseLoggedIn()" routerLinkActive="active" routerLink="/welcome/Chrysa" class="nav-link">Home</a></li>
+          <li><a *ngIf="hardcodedAuthnticationService.isUseLoggedIn()" routerLinkActive="active" routerLink="/todos" class="nav-link">Everyday Tasks</a></li>
+          <li><a *ngIf="hardcodedAuthnticationService.isUseLoggedIn()" routerLinkActive="active" routerLink="/calendar" class="nav-link">Calendar</a></li>
+          <li><a *ngIf="hardcodedAuthnticationService.isUseLoggedIn()" routerLinkActive="active" routerLink="/expenses" class="nav-link">Expenses</a></li>
+        </ul>
+  
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+          <li><a *ngIf="!hardcodedAuthnticationService.isUseLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+          <li><a *ngIf="hardcodedAuthnticationService.isUseLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+<style>
+  .nav-link {
+    font-family: 'Open Sans', sans-serif;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2294a9;
+  }
+
+  .nav-link.active {
+    background-color: white;
+    color: rgb(16, 16, 16);
+  }
+
+  .navbar {
+    height: 60px;
+    width: 100%;
+  }
+
+  header {
+    position: relative;
+    z-index: 1;
+  }
+
+ 
+</style>
+
+
